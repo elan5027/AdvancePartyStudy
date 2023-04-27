@@ -52,14 +52,12 @@ def pascal(n):
         parscal_list.append(tmp)
     return parscal_list[n]
 
-for i in range(1, 9):
-    print(pascal(i))
+# for i in range(1, 9):
+#     print(pascal(i))
 
 def pascal2(n):
     if n == 1:
         return [[1]]
-    elif n == 2:
-        return [[1],[1,1]]
     else:
         result = pascal2(n-1)
         num_array = [1]
@@ -70,5 +68,4 @@ def pascal2(n):
         return result
 
 for i in range(1, 9):
-    test = pascal2(i)
-    print(test[i-1])
+    print(pascal2(i)[i-1])
