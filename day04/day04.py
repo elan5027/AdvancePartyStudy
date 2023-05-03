@@ -30,8 +30,8 @@ response = requests.post('https://jsonplaceholder.typicode.com/posts', data=data
 
 # 방법1. 전송한 데이터 그대로 Json형태로 넣기
 if response.status_code == 201:
-    # with open('result.text', 'w') as test_file:
-    #      json.dump(data, test_file, indent='\t')
+    with open('result.text', 'w') as test_file:
+        json.dump(data, test_file, indent='\t')
          
 # 방법2. 별도의 값으로 받아와서 별도 저장
     title, body, userId = data.values()
