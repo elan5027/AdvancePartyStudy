@@ -36,7 +36,6 @@ def fibo2(n):
 # 트리구조? 
 
 # 파스칼의 삼각형 
-n = 8 
 
 def pascal(n):
     parscal_list = [[1]]
@@ -50,10 +49,10 @@ def pascal(n):
                 tmp.append(parscal_list[x-1][y-1]+parscal_list[x-1][y])
         tmp.append(1)
         parscal_list.append(tmp)
-    return parscal_list[n]
+    return parscal_list
 
-# for i in range(1, 9):
-#     print(pascal(i))
+for i in range(1, 9):
+    print(pascal(i))
 
 def pascal2(n):
     if n == 1:
@@ -67,5 +66,5 @@ def pascal2(n):
         result.append(num_array)
         return result
 
-for i in range(1, 9):
-    print(pascal2(i)[i-1])
+# for i in range(1, 9):
+#     print(pascal2(i)[i-1])
